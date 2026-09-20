@@ -16,10 +16,13 @@ const mockProject = {
   outputFormat: 'claude',
 };
 
-// Test 1: Verificar se os 12 agentes pré-configurados existem
+// Test 1: Verificar se os 18 agentes pré-configurados existem
 console.log('1. Verificando catálogo de agentes universais...');
-assert(UNIVERSAL_AGENTS.length >= 12, 'Deve haver pelo menos 12 agentes pré-configurados');
-console.log(`   ✓ ${UNIVERSAL_AGENTS.length} agentes catalogados com sucesso.`);
+assert(UNIVERSAL_AGENTS.length >= 18, `Deve haver pelo menos 18 agentes pré-configurados (contém: ${UNIVERSAL_AGENTS.length})`);
+const medicalAgents = UNIVERSAL_AGENTS.filter(a => a.category === 'medical');
+assert(medicalAgents.length >= 6, `Deve conter pelo menos 6 agentes médicos (contém: ${medicalAgents.length})`);
+console.log(`   ✓ ${UNIVERSAL_AGENTS.length} agentes catalogados com sucesso (${medicalAgents.length} médicos/clínicos).`);
+
 
 // Test 2: Testar geração de Markdown para o agente backend
 console.log('\n2. Testando geração de Markdown para backend.md...');

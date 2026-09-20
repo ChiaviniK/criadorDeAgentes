@@ -55,6 +55,46 @@ export const ProjectConfigModal: React.FC<ProjectConfigModalProps> = ({
         {/* Body */}
         <form onSubmit={handleSubmit} className="p-6 overflow-y-auto space-y-5 flex-1">
           
+          {/* Preset Archetypes */}
+          <div className="bg-slate-950/60 p-3 rounded-xl border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+            <span className="text-xs font-semibold text-slate-300">Arquétipo Rápido de Projeto:</span>
+            <div className="flex items-center space-x-2 w-full sm:w-auto">
+              <button
+                type="button"
+                onClick={() => {
+                  setFormData(prev => ({
+                    ...prev,
+                    projectName: 'ClinicaMedicaInteligente',
+                    domain: 'Gestão Clínica, Prontuário Eletrônico & Telemedicina',
+                    securityLevel: 'critical',
+                  }));
+                  setEntitiesText('Paciente, Prontuario, Consulta, Prescricao, Exame, GuiaTISS');
+                  setFeaturesText('Prontuário Eletrônico (PEP), Triagem Manchester, Agendamento Inteligente, Auditoria TISS/TUSS, Telemedicina CFM');
+                }}
+                className="flex-1 sm:flex-none px-3 py-1.5 rounded-lg bg-rose-950/40 hover:bg-rose-900/50 border border-rose-800/60 text-rose-200 text-xs font-semibold transition flex items-center justify-center space-x-1"
+              >
+                <span>🩺 Clínica Médica & Saúde</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  setFormData(prev => ({
+                    ...prev,
+                    projectName: 'SaaSCorporativo',
+                    domain: 'Gestão Operacional e Automação de Processos',
+                    securityLevel: 'high',
+                  }));
+                  setEntitiesText('Usuario, Processo, Documento, Relatorio, Auditoria');
+                  setFeaturesText('Autenticação RBAC, Gestão de Processos, Dashboard Analítico, Webhooks');
+                }}
+                className="flex-1 sm:flex-none px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition flex items-center justify-center space-x-1"
+              >
+                <span>🏢 SaaS Geral</span>
+              </button>
+            </div>
+          </div>
+
           {/* Nome e Domínio */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>

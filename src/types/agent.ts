@@ -41,8 +41,9 @@ export interface AgentDefinition {
   description: string;
   model: AgentModel;
   tools: AgentTool[];
-  category: 'core' | 'review' | 'specialist' | 'quality' | 'custom';
+  category: 'core' | 'review' | 'specialist' | 'quality' | 'medical' | 'custom';
   beforeCoding: string[];
+
   principles: string[];
   checklists: AgentChecklistCategory[];
   inviolableRules: string[];

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { 
   Shield, Code2, Database, Search, TestTube, Cpu, Eye, FileText, 
-  Binary, Wrench, Sparkles, Copy, Download, ChevronRight, Filter
+  Binary, Wrench, Sparkles, Copy, Download, ChevronRight, Filter,
+  Stethoscope, HeartPulse, Activity, Calendar, Pill, FileCheck
 } from 'lucide-react';
 import { AgentDefinition, ProjectConfig } from '../types/agent';
 import { generateAgentMarkdown } from '../services/agentGenerator';
@@ -35,6 +36,12 @@ export const AgentCatalog: React.FC<AgentCatalogProps> = ({
   });
 
   const getAgentIcon = (id: string) => {
+    if (id.includes('medico-assistente')) return <Stethoscope className="h-5 w-5 text-rose-400" />;
+    if (id.includes('triagem-protocolo')) return <Activity className="h-5 w-5 text-amber-400" />;
+    if (id.includes('gestor-agenda')) return <Calendar className="h-5 w-5 text-sky-400" />;
+    if (id.includes('faturamento-tiss')) return <FileCheck className="h-5 w-5 text-emerald-400" />;
+    if (id.includes('seguranca-privacidade-pep')) return <Shield className="h-5 w-5 text-indigo-400" />;
+    if (id.includes('interacao-medicamentosa')) return <Pill className="h-5 w-5 text-fuchsia-400" />;
     if (id.includes('security')) return <Shield className="h-5 w-5 text-rose-400" />;
     if (id.includes('code-reviewer')) return <Code2 className="h-5 w-5 text-emerald-400" />;
     if (id.includes('backend')) return <Cpu className="h-5 w-5 text-sky-400" />;
@@ -51,11 +58,13 @@ export const AgentCatalog: React.FC<AgentCatalogProps> = ({
 
   const categories = [
     { id: 'all', label: 'Todos os Agentes' },
+    { id: 'medical', label: 'Médicos & Clínicas 🩺' },
     { id: 'core', label: 'Núcleo / Desenvolvimento' },
     { id: 'review', label: 'Revisão & Guardrails' },
     { id: 'quality', label: 'Qualidade & Testes' },
     { id: 'specialist', label: 'Especialistas & Big-O' },
   ];
+
 
   return (
     <div className="space-y-6 animate-fadeIn">
