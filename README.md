@@ -1,8 +1,11 @@
 # 🤖 AgentMD Studio — Criador de Agentes Agênticos Full-Stack
 
-Plataforma completa para geração, customização, auditoria e exportação de especificações Markdown (`.md`) para novos agentes e ecossistemas agênticos.
+> 🌐 **Aplicação Online:** [https://chiavinik.github.io/criadorDeAgentes/](https://chiavinik.github.io/criadorDeAgentes/)  
+> 📦 **Repositório GitHub:** [https://github.com/ChiaviniK/criadorDeAgentes](https://github.com/ChiaviniK/criadorDeAgentes)
 
-Desenvolvida com base rigorosa nas diretrizes do [Guia Universal de Desenvolvimento Agêntico Full-Stack Multi-Stack](file:///c:/Users/lenovo/Desktop/projetoscopilot/criadorDeAgentes/Guia_Universal_Desenvolvimento_Agentico_FullStack_Estruturas_Dados.md).
+Plataforma completa para concepção, customização, validação em tempo real e exportação de especificações Markdown (`.md`) para novos agentes e ecossistemas agênticos.
+
+Desenvolvida com base rigorosa nas diretrizes do [Guia Universal de Desenvolvimento Agêntico Full-Stack Multi-Stack](Guia_Universal_Desenvolvimento_Agentico_FullStack_Estruturas_Dados.md).
 
 ---
 
